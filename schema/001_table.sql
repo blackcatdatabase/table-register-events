@@ -3,7 +3,7 @@
 CREATE TABLE IF NOT EXISTS register_events (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   user_id BIGINT UNSIGNED NULL,
-  type ENUM(''register_success'',''register_failure'') NOT NULL,
+  type ENUM('register_success','register_failure') NOT NULL,
   ip_hash BINARY(32) NULL,
   ip_hash_key_version VARCHAR(64) NULL,
   user_agent VARCHAR(1024) NULL,
