@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace BlackCat\Database\Packages\RegisterEvents\Service;
 
-use BlackCat\Core\Database\Database;
+use BlackCat\Core\Database;
 use BlackCat\Database\Packages\RegisterEvents\Dto\RegisterEventDto;
 use BlackCat\Database\Packages\RegisterEvents\Mapper\RegisterEventDtoMapper;
 use BlackCat\Database\Packages\RegisterEvents\Repository\RegisterEventRepository;
