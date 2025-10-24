@@ -6,7 +6,7 @@ namespace BlackCat\Database\Packages\RegisterEvents;
 /**
  * Bezpečný builder WHERE/ORDER/LIMIT.
  * - whitelist filtrů: [ 'id', 'user_id', 'type', 'ip_hash', 'ip_hash_key_version', 'user_agent', 'occurred_at', 'meta' ]
- * - whitelist pro LIKE hledání: [ 'ip_hash_key_version', 'user_agent' ]
+ * - whitelist pro LIKE hledání: [ 'type', 'ip_hash_key_version', 'user_agent' ]
  */
 final class Criteria {
     /** @var array<string,mixed> */
@@ -61,7 +61,7 @@ final class Criteria {
 
         // fulltext/LIKE (přes whitelist)
         if ($this->search !== null) {
-            $searchCols = [ 'ip_hash_key_version', 'user_agent' ];
+            $searchCols = [ 'type', 'ip_hash_key_version', 'user_agent' ];
             $likeParts = [];
             foreach ($searchCols as $i=>$c) {
                 if ($c === '') continue;
