@@ -8,7 +8,7 @@ SELECT
   user_id,
   type,
   ip_hash,
-  UPPER(encode(ip_hash,'hex'))::char(32) AS ip_hash_hex,
+  UPPER(encode(ip_hash,'hex')) AS ip_hash_hex,
   ip_hash_key_version,
   user_agent,
   occurred_at,
