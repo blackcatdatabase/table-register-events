@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-mysql.psd1 (map@db2f8b8)
+-- Auto-generated from schema-map-mysql.psd1 (map@62c9c93)
 -- engine: mysql
 -- table:  register_events
 CREATE TABLE IF NOT EXISTS register_events (
@@ -14,4 +14,4 @@ CREATE TABLE IF NOT EXISTS register_events (
   INDEX idx_reg_time (occurred_at),
   INDEX idx_reg_type_time (`type`, occurred_at),
   INDEX idx_reg_ip (ip_hash)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
