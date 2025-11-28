@@ -17,7 +17,7 @@ use BlackCat\Database\Support\DtoHydrator;
 final class RegisterEventDtoMapper
 {
     /** @var array<string,string> Column -> DTO property */
-    private const COL_TO_PROP = [ 'user_id' => 'userId', 'ip_hash' => 'ipHash', 'ip_hash_key_version' => 'ipHashKeyVersion', 'user_agent' => 'userAgent', 'occurred_at' => 'occurredAt' ];
+    private const COL_TO_PROP = [ 'id' => 'id', 'user_id' => 'userId', 'type' => 'type', 'ip_hash' => 'ipHash', 'ip_hash_key_version' => 'ipHashKeyVersion', 'user_agent' => 'userAgent', 'occurred_at' => 'occurredAt', 'meta' => 'meta' ];
 
     /** @var string[] */
     private const BOOL_COLS   = [];
