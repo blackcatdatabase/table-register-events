@@ -6,13 +6,13 @@ Registration related events (success/failure).
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
 | id | BIGINT | NO |  | Surrogate primary key. |
+| user_id | BIGINT | YES |  | User (FK users.id), optional. |
+| type | mysql: ENUM('register_success','register_failure') / postgres: TEXT | NO |  | Event type. (enum: register_success, register_failure) |
 | ip_hash | mysql: BINARY(32) / postgres: BYTEA | YES |  | Hashed client IP. |
 | ip_hash_key_version | VARCHAR(64) | YES |  | Key version for ip_hash. |
-| meta | mysql: JSON / postgres: JSONB | YES |  | JSON metadata. |
-| occurred_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | When event occurred (UTC). |
-| type | mysql: ENUM('register_success','register_failure') / postgres: TEXT | NO |  | Event type. (enum: register_success, register_failure) |
 | user_agent | VARCHAR(1024) | YES |  | Client user agent. |
-| user_id | BIGINT | YES |  | User (FK users.id), optional. |
+| occurred_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | When event occurred (UTC). |
+| meta | mysql: JSON / postgres: JSONB | YES |  | JSON metadata. |
 
 ## Engine Details
 
